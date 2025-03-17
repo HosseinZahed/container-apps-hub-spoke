@@ -2,7 +2,7 @@
 
 This document provides the steps to set up a hub-spoke architecture with various Azure resources using Azure CLI commands.
 
-<img src="architecture.drawio.png" alt="Hub-Spoke Architecture" style="border: 1px solid #ddd; border-radius: 4px; padding: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);" width="800">
+<img src="architecture.svg" alt="Hub-Spoke Architecture" style="border: 1px solid #ddd; border-radius: 4px; padding: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);" width="800">
 
 
 ## 📋 Prerequisites
