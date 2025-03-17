@@ -167,3 +167,55 @@ az network private-dns zone create --resource-group rg-hub-spoke-poc --name cont
 az network private-dns record-set a create --resource-group rg-hub-spoke-poc --zone-name contoso.com --name afw-hub
 az network private-dns record-set a add-record --resource-group rg-hub-spoke-poc --zone-name contoso.com --record-set-name afw-hub --ipv4-address <afw-hub-ip-address>
 ```
+
+## 🌐 Container App Endpoints
+### 1️⃣ Single App Deployed to a Container App
+#### With Public Ingress:
+**Accessibility:** The app is accessible over the internet via a public endpoint.
+
+**Access Methods:**
+- **IP Address:** The app can be accessed using its public IP address.
+- **FQDN:** The app is accessible via a fully qualified domain name (FQDN) like 
+  - myapp.happyhill-70162bb9.canadacentral.azurecontainerapps.io
+- **Port:** The app listens on specified ports for HTTP or TCP traffic.
+
+#### Without Public Ingress:
+**Accessibility:** The app is only accessible internally within the Azure environment.
+
+**Access Methods:**
+- **App Name:** The app can be accessed internally using its name, e.g.
+  - http://<APP_NAME>
+- **FQDN:** The app is accessible via an internal FQDN within the Azure environment.
+- **Port:** The app listens on specified ports for internal HTTP or TCP traffic.
+
+### 🔢 Multiple Apps Deployed to a Container App
+
+#### With Public Ingress:
+**Accessibility:** All apps are accessible over the internet via their respective public endpoints.
+
+**Access Methods:**
+- **IP Address:** Each app can be accessed using its public IP address.
+- **FQDN:** Each app is accessible via its own FQDN, e.g., 
+  - app1.happyhill-70162bb9.canadacentral.azurecontainerapps.io
+  - app2.happyhill-70162bb9.canadacentral.azurecontainerapps.io
+- **Port:** Each app listens on specified ports for HTTP or TCP traffic.
+
+#### Without Public Ingress:
+**Accessibility:** All apps are only accessible internally within the Azure environment.
+
+**Access Methods:**
+- **App Name:** Each app can be accessed internally using its name, e.g.
+  - http://<APP_NAME>
+- **FQDN:** Each app is accessible via an internal FQDN within the Azure environment.
+- **Port:** Each app listens on specified ports for internal HTTP or TCP traffic.
+
+
+## 🔗 References
+
+- [Hub-spoke network topology in Azure](https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke)
+- [Ingress in Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/ingress-overview)
+- [Configure Ingress for your app in Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/ingress-how-to?pivots=azure-cli)
+- [Connect applications in Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/connect-apps?tabs=bash)
+- [Custom VNet configuration in Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/networking?tabs=workload-profiles-env%2Cazure-cli#custom-vnet-configuration)
+- [Azure Database for PostgreSQL flexible server networking with Private Link](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-networking-private-link#private-endpoints)
+- [Blue-Green Deployment in Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/blue-green-deployment?pivots=azure-cli)
