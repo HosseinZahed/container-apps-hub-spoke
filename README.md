@@ -173,7 +173,7 @@ az network private-dns record-set a add-record --resource-group rg-hub-spoke-poc
 
 ## 🌐 Container App Endpoints
 ### 1️⃣ Single App Deployed to a Container App
-#### With Public Ingress:
+#### `With Public Ingress:`
 **Accessibility:** The app is accessible over the internet via a public endpoint.
 
 **Access Methods:**
@@ -182,7 +182,7 @@ az network private-dns record-set a add-record --resource-group rg-hub-spoke-poc
   - myapp.happyhill-70162bb9.canadacentral.azurecontainerapps.io
 - **Port:** The app listens on specified ports for HTTP or TCP traffic.
 
-#### Without Public Ingress:
+#### `Without Public Ingress:`
 **Accessibility:** The app is only accessible internally within the Azure environment.
 
 **Access Methods:**
@@ -193,7 +193,7 @@ az network private-dns record-set a add-record --resource-group rg-hub-spoke-poc
 
 ### 🔢 Multiple Apps Deployed to a Container App
 
-#### With Public Ingress:
+#### `With Public Ingress:`
 **Accessibility:** All apps are accessible over the internet via their respective public endpoints.
 
 **Access Methods:**
@@ -203,7 +203,7 @@ az network private-dns record-set a add-record --resource-group rg-hub-spoke-poc
   - app2.happyhill-70162bb9.canadacentral.azurecontainerapps.io
 - **Port:** Each app listens on specified ports for HTTP or TCP traffic.
 
-#### Without Public Ingress:
+#### `Without Public Ingress:`
 **Accessibility:** All apps are only accessible internally within the Azure environment.
 
 **Access Methods:**
